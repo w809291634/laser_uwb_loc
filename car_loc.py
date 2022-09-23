@@ -19,7 +19,7 @@ class Car_loc:
         self.waitTf=True
 
         self.__gps_pos = None
-        self.__subUWB = rospy.Subscriber("/gps/fix", NavSatFix, self.__onUWBCb) # 小车UWB消息订阅函数   
+        self.__subUWB = rospy.Subscriber("/gps/fix", NavSatFix, self.__onUWBCb) # 小车UWB消息定位函数   
     
     # 监听UWB实时位置
     def __onUWBCb(self, msg):
